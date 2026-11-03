@@ -56,7 +56,7 @@ internal class BuildConsoleCommand : ConsoleCommand
 
         engine.JobStarting += (sender, args) =>
         {
-            Outputter.Write($"Starting '{args.Job.Name}'...");
+            Outputter.Write($"Starting '{args.Job.Name}' ({args.Job.Id}-{args.Job.Number})...");
         };
 
         engine.JobEnded += (sender, args) =>
@@ -64,13 +64,13 @@ internal class BuildConsoleCommand : ConsoleCommand
             switch (args.ExecutionResult.ResultType)
             {
                 case JobExecutionResultType.Success:
-                    Outputter.WriteSuccess($"Job '{args.Job.Name}' successfully executed.");
+                    Outputter.WriteSuccess($"Job '{args.Job.Name}' ({args.Job.Id}-{args.Job.Number}) successfully executed.");
                     break;
                 case JobExecutionResultType.Failure:
-                    Outputter.WriteError($"Job '{args.Job.Name}' failed.");
+                    Outputter.WriteError($"Job '{args.Job.Name}' ({args.Job.Id}-{args.Job.Number}) failed.");
                     break;
                 case JobExecutionResultType.NotExecuted:
-                    Outputter.WriteError($"Job '{args.Job.Name}' will not be executed.");
+                    Outputter.WriteError($"Job '{args.Job.Name}' ({args.Job.Id}-{args.Job.Number}) will not be executed.");
                     break;
                 case JobExecutionResultType.JobNotFound:
                     Outputter.WriteError("Specified job index not found. Use 'jobs' command to list available jobs.");
@@ -79,7 +79,7 @@ internal class BuildConsoleCommand : ConsoleCommand
                     Outputter.WriteError("Solution was not found.");
                     break;
                 case JobExecutionResultType.UnhandledException:
-                    Outputter.WriteError($"Unhandled exception while executing '{args.Job.Name}': " +
+                    Outputter.WriteError($"Unhandled exception while executing '{args.Job.Name}' ({args.Job.Id}-{args.Job.Number}): " +
                                          $"{args.ExecutionResult.UnhandledException.Message} {args.ExecutionResult.UnhandledException.StackTrace}");
                     break;
                 default:

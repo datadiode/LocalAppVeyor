@@ -49,6 +49,12 @@ public sealed class Engine
                     select new MatrixJob(os, environmentVariables, configuration, platform))
                 .ToArray();
 
+            for (var i = 0; i < _jobs.Length; i++)
+            {
+                _jobs[i].Id = Guid.NewGuid().ToString("n").Substring(0, 16);
+                _jobs[i].Number = i + 1;
+            }
+
             return _jobs;
         }
     }
@@ -83,6 +89,10 @@ public sealed class Engine
     public JobExecutionResult ExecuteJob(MatrixJob job)
     {
         JobStarting?.Invoke(this, new JobStartingEventArgs(job));
+
+        Environment.SetEnvironmentVariable("APPVEYOR_JOB_ID", job.Id);
+        Environment.SetEnvironmentVariable("APPVEYOR_JOB_NAME", job.Name);
+        Environment.SetEnvironmentVariable("APPVEYOR_JOB_NUMBER", job.Number.ToString());
 
         var executionContext = new ExecutionContext(
             job,

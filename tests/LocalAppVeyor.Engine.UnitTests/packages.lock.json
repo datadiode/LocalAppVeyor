@@ -11,6 +11,22 @@
           "System.Configuration.ConfigurationManager": "4.4.0"
         }
       },
+      "Microsoft.Build": {
+        "type": "Direct",
+        "requested": "[17.8.43, )",
+        "resolved": "17.8.43",
+        "contentHash": "4vD+GtT8X7cvGTpJeZLL6qrQQo4orug4ncC23UegPCi0lo0ZY2H36SH/aiWql98upC7ezatrwoDzLOuBSJZBiQ==",
+        "dependencies": {
+          "Microsoft.Build.Framework": "17.8.43",
+          "Microsoft.NET.StringTools": "17.8.43",
+          "System.Collections.Immutable": "7.0.0",
+          "System.Configuration.ConfigurationManager": "7.0.0",
+          "System.Reflection.Metadata": "7.0.0",
+          "System.Reflection.MetadataLoadContext": "7.0.0",
+          "System.Security.Principal.Windows": "5.0.0",
+          "System.Threading.Tasks.Dataflow": "7.0.0"
+        }
+      },
       "Microsoft.NET.Test.Sdk": {
         "type": "Direct",
         "requested": "[17.8.0, )",
@@ -113,25 +129,10 @@
         "resolved": "5.0.0",
         "contentHash": "W8DPQjkMScOMTtJbPwmPyj9c3zYSFGawDW3jwlBOOsnY+EzZFLgNQ/UMkK35JmkNOVPdCyPr2Tw7Vv9N+KA3ZQ=="
       },
-      "Microsoft.Build": {
-        "type": "Transitive",
-        "resolved": "17.8.3",
-        "contentHash": "jOxP2DrBZb2zuDO5M8LfI50SCdXlahgUHJ6mH0jz4OBID0F9o+DVggk0CPAONmcbUPo2SsQCFkMaxmHkKLj99Q==",
-        "dependencies": {
-          "Microsoft.Build.Framework": "17.8.3",
-          "Microsoft.NET.StringTools": "17.8.3",
-          "System.Collections.Immutable": "7.0.0",
-          "System.Configuration.ConfigurationManager": "7.0.0",
-          "System.Reflection.Metadata": "7.0.0",
-          "System.Reflection.MetadataLoadContext": "7.0.0",
-          "System.Security.Principal.Windows": "5.0.0",
-          "System.Threading.Tasks.Dataflow": "7.0.0"
-        }
-      },
       "Microsoft.Build.Framework": {
         "type": "Transitive",
-        "resolved": "17.8.3",
-        "contentHash": "NrQZJW8TlKVPx72yltGb8SVz3P5mNRk9fNiD/ao8jRSk48WqIIdCn99q4IjlVmPcruuQ+yLdjNQLL8Rb4c916g=="
+        "resolved": "17.8.43",
+        "contentHash": "TA6fCbd9qFSyhIKcUn5BhDN3/JrqpspO9KYsZKUvHyQpQrHVdzy4Hk6egjjBP3T0L562TLZuHEzQwJziyRBEkw=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Transitive",
@@ -196,8 +197,8 @@
       },
       "Microsoft.NET.StringTools": {
         "type": "Transitive",
-        "resolved": "17.8.3",
-        "contentHash": "y6DiuacjlIfXH3XVQG5htf+4oheinZAo7sHbITB3z7yCXQec48f9ZhGSXkr+xn1bfl73Yc3ZQEW2peJ5X68AvQ=="
+        "resolved": "17.8.43",
+        "contentHash": "DglJrwfew+PEAzZp0FALdQl4y2ysgaUsddR78Xlnk2UFw4jBN/xmM6tIyT6sFkRXZ6Y0xZ8VKsk8Xii07lWqTA=="
       },
       "Microsoft.NETCore.Platforms": {
         "type": "Transitive",
@@ -1842,7 +1843,7 @@
       "localappveyor.engine": {
         "type": "Project",
         "dependencies": {
-          "Microsoft.Build": "[17.8.3, )",
+          "Microsoft.Build": "[17.8.43, )",
           "Microsoft.PowerShell.SDK": "[7.4.0, )",
           "System.Diagnostics.Process": "[4.3.0, )",
           "System.IO.Abstractions": "[20.0.4, )",

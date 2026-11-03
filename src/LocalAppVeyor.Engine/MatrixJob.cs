@@ -12,6 +12,10 @@ public class MatrixJob
 
     public string Configuration { get; }
 
+    public string Id { get; set; }
+
+    public int Number { get; set; }
+
     public IReadOnlyCollection<Variable> Variables { get; }
 
     private string _name;

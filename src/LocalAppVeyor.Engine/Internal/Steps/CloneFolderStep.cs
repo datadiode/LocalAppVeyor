@@ -32,6 +32,8 @@ internal class CloneFolderStep : IEngineStep
             _fileSystem.Directory.CreateDirectory(dirDestination.FullName);
         }
 
+        ClearAttributes(dirDestination);
+
         // empty destination
         foreach (var fileInfo in dirDestination.GetFiles())
         {
@@ -44,6 +46,18 @@ internal class CloneFolderStep : IEngineStep
         }
 
         CopyAll(dirSource, dirDestination);
+    }
+
+    private void ClearAttributes(IDirectoryInfo destination)
+    {
+        foreach (var f in destination.GetFiles())
+        {
+            _fileSystem.File.SetAttributes(_fileSystem.Path.Combine(destination.FullName, f.Name), System.IO.FileAttributes.Normal);
+        }
+        foreach (var d in destination.GetDirectories())
+        {
+            ClearAttributes(d);
+        }
     }
 
     private void CopyAll(IDirectoryInfo source, IDirectoryInfo destination)
