@@ -15,6 +15,9 @@ build_script:
 after_build:
   - dotnet pack src\LocalAppVeyor.Engine --configuration %configuration% --output out_engine
   - dotnet pack src\LocalAppVeyor --configuration %configuration% --output out_console
+  - for /F "tokens=1 delims=+" %%v in ("%APPVEYOR_BUILD_VERSION%") do set VERSION=%%v
+  - 7z a out_console\AppVeyorLocal.%VERSION%.nupkg src\LocalAppVeyor\bin\Release\net8.0\AppVeyorLocal.exe
+  - 7z rn out_console\AppVeyorLocal.%VERSION%.nupkg src/LocalAppVeyor/bin/Release/net8.0/AppVeyorLocal.exe tools/net8.0/any/AppVeyorLocal.exe
 
 test_script:
   - dotnet test tests\LocalAppVeyor.Engine.UnitTests\LocalAppVeyor.Engine.UnitTests.csproj --configuration %configuration%

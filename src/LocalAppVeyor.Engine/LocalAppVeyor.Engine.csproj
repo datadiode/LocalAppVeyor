@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Allows one to execute AppVeyor build pipeline programatically, for a given local repository and configuration.</Description>
     <Copyright>joaope 2020</Copyright>
-    <AssemblyTitle>LocalAppVeyor.Engine</AssemblyTitle>
+    <AssemblyTitle>AppVeyorLocal.Engine</AssemblyTitle>
     <VersionPrefix>0.6.0</VersionPrefix>
     <Authors>joaope</Authors>
     <TargetFramework>net8.0</TargetFramework>
@@ -11,13 +11,13 @@
     <PlatformTarget>anycpu</PlatformTarget>
     <LangVersion>latest</LangVersion>
     <DebugType>portable</DebugType>
-    <AssemblyName>LocalAppVeyor.Engine</AssemblyName>
-    <PackageId>LocalAppVeyor.Engine</PackageId>
+    <AssemblyName>AppVeyorLocal.Engine</AssemblyName>
+    <PackageId>AppVeyorLocal.Engine</PackageId>
     <PackageTags>console;appveyor;local;build;api</PackageTags>
-    <PackageProjectUrl>https://github.com/joaope/LocalAppVeyor</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/datadiode/AppVeyorLocal</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/joaope/LocalAppVeyor.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/datadiode/AppVeyorLocal.git</RepositoryUrl>
     <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
 

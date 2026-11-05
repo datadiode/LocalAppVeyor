@@ -20,9 +20,9 @@ public static class Program
     {
         var app = new CommandLineApplication
         {
-            Name = "LocalAppVeyor",
-            FullName = "LocalAppVeyor",
-            Description = "LocalAppVeyor allows one to run an appveyor.yml build script locally",
+            Name = "AppVeyorLocal",
+            FullName = "AppVeyorLocal",
+            Description = "AppVeyorLocal allows one to run an appveyor.yml build script locally",
             UnrecognizedArgumentHandling = UnrecognizedArgumentHandling.StopParsingAndCollect
         };
 
