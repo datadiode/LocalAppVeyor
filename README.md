@@ -1,3 +1,8 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+
+This fork of https://github.com/joaope/localappveyor circumvents issues with read-only files within the clone folder.
+
+---
 .NET Core global tool which brings _**appveyor.yml**_ to the center of your build process by making possible to execute 
 its build jobs, locally.
 

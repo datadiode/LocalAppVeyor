@@ -14,10 +14,10 @@
     <AssemblyName>LocalAppVeyor.Engine</AssemblyName>
     <PackageId>LocalAppVeyor.Engine</PackageId>
     <PackageTags>console;appveyor;local;build;api</PackageTags>
-    <PackageProjectUrl>https://github.com/joaope/LocalAppVeyor</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/datadiode/LocalAppVeyor</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/joaope/LocalAppVeyor.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/datadiode/LocalAppVeyor.git</RepositoryUrl>
     <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
 
